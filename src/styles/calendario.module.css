@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f4f8;
+  }
+  
+  .schedule-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f2f4f8;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 24px;
+    color: #43054e;
+    margin-bottom: 10px;
+  }
+  
+  .header h3 {
+    font-size: 18px;
+    color: #6a6a6a;
+  }
+  
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #f9f9f9;
+    color: #43054e;
+    font-weight: bold;
+  }
+  
+  .time-slot {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .empty-slot {
+    background-color: #f4f4f4;
+    height: 50px; 
+  }
+  
+  .voltar-button {
+    background: #43054e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .voltar-button:hover {
+    background: #32003b;
+  }
+  
