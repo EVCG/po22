@@ -1,6 +1,8 @@
 import styles from "../styles/page.module.css";
 import friends from "../img/friends.jpg";
 import livro from "../img/livro.jpg";
+import sino from "../img/sino.jpg";
+import lupa2 from "../img/lupa2.png"
 import Image from "next/image";
 
 export default function Home() {
@@ -41,13 +43,13 @@ export default function Home() {
             <span>Seja Bem-Vindo(a) ao</span><br></br>
             <span className={styles.mensagem_organizador}>Organizador</span>
 
-            <button className={styles.tutorial}><img src={livro}></img>Tutorial</button>
+            <button className={styles.tutorial}><Image src={livro} className={styles.livro}/>Tutorial</button>
           </div>
           {/* Mural de alertas */}
           <div className={styles.anuncio}>
             <div className={styles.quadro_alerta}>
               <div className={styles.tituloMural}>
-                <span><img src="#"></img></span>
+                <span><Image src={sino} className={styles.sino}/></span>
                 <h2>Mural de Alertas</h2>
               </div>
               <p>Aqui aparecerá as turmas que estão sem professores definidos.</p>
@@ -86,7 +88,7 @@ export default function Home() {
               <option>Noturno</option>
             </select>
 
-            <input type="text" placeholder="Buscar" className={styles.buscar} />
+            <input type="text" placeholder="Buscar" className={styles.buscar}/><Image src={lupa2} className={styles.lupa}/>
           </div>
 
           {/* Grid de Cards */}
@@ -99,12 +101,14 @@ export default function Home() {
           {/* Paginação */}
           <div className={styles.paginacao}>
             <span><img className={styles.esquerda} src="https://cdn-icons-png.flaticon.com/512/109/109617.png"></img>  Anterior</span>
-            <a href="#" className={styles.numero1}>1</a>
-            <a href="#" className={styles.numero2}>2</a>
-            <a href="#" className={styles.numero3}>3</a>
-            <a href="#" className={styles.numeros}>...</a>
-            <a href="#" className={styles.numero7}>7</a>
-            <a href="#" className={styles.numero8}>8</a>
+            <div className={styles.paginas}>
+              <a href="#" className={styles.numero1}>1</a>
+              <a href="#" className={styles.numero2}>2</a>
+              <a href="#" className={styles.numero3}>3</a>
+              <a href="#" className={styles.numeros}>...</a>
+              <a href="#" className={styles.numero7}>7</a>
+              <a href="#" className={styles.numero8}>8</a>
+            </div>
             <span>Próximo  <img className={styles.direita} src="https://cdn-icons-png.flaticon.com/512/109/109617.png"></img></span>
           </div>
         </div>

@@ -14,9 +14,11 @@
   width: 100%;
   display: flex;
   position: fixed;
+  top:-20px;
   background-color: #f2f4f8;
   padding: 15px;
   padding-bottom: 20px;
+  z-index: 999;
 }
 
 .main {
@@ -29,9 +31,8 @@
 
 .logo_principal {
   width: 450px;
-  height: 100%;
   overflow: hidden;
-  padding: 20px;
+  padding: 30px 0px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +51,7 @@
   display: flex;
   align-items: center;
   padding-left: 7%;
+  
 }
 
 .nav a {
@@ -59,18 +61,17 @@
   font-weight: bold;
   margin: 38px;
   width: auto;
-  border-spacing: 20px;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 .nav_painel {
   color: #bd0084 !important;
-  border-bottom: #43054e solid 1px;
+  border-bottom: #43054e solid 2px;
 }
 
 .nav a:hover {
   color: #bf0087;
-  border-bottom: #43054e solid 1px;
 
 }
 
@@ -87,6 +88,7 @@
   font-size: 20px;
   font-weight: bold;
   width: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .usuario img {
@@ -115,7 +117,7 @@
 }
 
 .corpo {
-  width: 88%;
+  width: 70%;
   height: 30%;
   background-color: #4B006E;
   border-radius: 50% 50% 20% 20%;
@@ -170,6 +172,11 @@
   align-items: center;
 }
 
+.livro{
+  width: 30%;
+  height: 100%;
+}
+
 .tutorial:hover {
   background: linear-gradient(90deg, #6c0e8b, #e02a69);
 }
@@ -187,9 +194,16 @@
 .tituloMural span {
   width: 80px;
   height: 80px;
-  /* problema ao colocar imagem resolver depois */
-  /* background-image: url(''); */
   background-position: center;
+}
+
+.tituloMural h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sino{
+  width: 80%;
+  height: 100%;
 }
 
 .turmaResumida {
@@ -243,10 +257,9 @@
 }
 
 .icone_alerta {
-  background-color: #e02a69;
+  background-color: #ec0089;
   color: white;
   font-weight: bold;
-  padding: 10px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -254,6 +267,7 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .text_alerta {
@@ -262,26 +276,27 @@
   font-size: 20px;
   color: #43054e;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .botao_professor {
   background-color: #900372;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 10px 1px;
+  border-radius: 9px;
+  padding: 7px 4px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  width:15%;
+  width:16%;
   justify-content: space-between;
   
 }
 
 .friends{
-  width: 30px;
-  height: 30px;
+  width: 23px;
+  height: 23px;
 }
 
 .container {
@@ -297,13 +312,12 @@
   margin-left: -180px;
 }
 
-.filtros select,
-.filtros .buscar {
+.filtros select{
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  width: 300px;
-  height: 43px;
+  width: 250px;
+  height: 40px;
   color: #636363;
   font-size: 20px;
   margin-bottom: 2%;
@@ -311,6 +325,24 @@
 
 .buscar {
   flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 250px;
+  height: 18px;
+  color: #636363;
+  font-size: 20px;
+  margin-bottom: 2%;
+  z-index: 997;
+}
+
+.lupa{
+  width: 38px;
+  height: 35px;
+  position: relative;
+  left: -3%;
+  top: 1px;
+  z-index: 998;
 }
 
 .grade_cartoes {
@@ -341,42 +373,43 @@
   width: 45px;
   height: 45px;
   background-color: #900372;
-  border-radius: 20%;
+  border-radius: 30%;
 }
 
 .corpo_cartao {
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: -10px;
   font-size: 25px;
 }
 
 .conteudo_cartao {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 .corpo_cartao h3 {
   color: #43054e;
   font-size: 25px;
-  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .corpo_cartao p {
   color: #43054e;
-  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .rodape_cartao {
   text-align: center;
-  border-top: solid 1px #9d9d9d;
-  height: 2%;
-  padding: 10px;
+  border-top: solid 1px #b8b8b8;
+  padding: 5px;
 }
 
 .status {
   color: #43054e;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .paginacao {
@@ -388,22 +421,28 @@
   font-size: 16px;
   margin: 10px;
   margin-top: 30px;
+  
 }
 
 .paginacao a {
-  height: 40px;
+  height: 30px;
   width: 40px;
   text-align: center;
   border-radius: 20%;
   font-size: 23px;
-  padding: 5px;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
-
+.paginas a{
+  padding: 6px 10px;
+  margin: 5px;
+}
 
 .numero1 {
   background-color: #43054e;
   color: white;
+  text-decoration: none;
 }
 
 .paginacao span {
@@ -412,10 +451,10 @@
   font-weight: bold;
   font-size: 20px;
   width: 120px;
-  height: 30px;
+  height: 10px;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 .paginacao span:hover {
