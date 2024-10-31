@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../components/login.module.css'; 
+import styles from '../styles/login.module.css'; 
 import logo from '../img/logo.png';
 import Image from "next/image";
 
