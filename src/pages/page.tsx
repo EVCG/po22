@@ -1,7 +1,7 @@
 import styles from "../styles/page.module.css";
 import friends from "../img/friends.jpg";
 import livro from "../img/livro.jpg";
-import sino from "../img/sino.jpg";
+import sino from "../img/sino.png";
 import lupa2 from "../img/lupa2.png";
 import Image from "next/image";
 import Header from "../components/header.js";
@@ -10,40 +10,32 @@ import Footer from "../components/footer.js";
 export default function Home() {
   return (
     <div className={styles.body}>
-      {/* Cabeçalho */}
       <Header />
-      {/* Conteudo Principal do site */}
       <div className={styles.main}>
-        {/* Area de recepção e anuncios */}
         <div className={styles.recepcao}>
           <div className={styles.apresentacao}>
-            <span>Olá *Seu Nome*,</span><br></br>
-            <span>Seja Bem-Vindo(a) ao</span><br></br>
+            <span>Olá *Seu Nome*,</span><br />
+            <span>Seja Bem-Vindo(a) ao</span><br />
             <span className={styles.mensagem_organizador}>Organizador</span>
-
-            <button className={styles.tutorial}><Image src={livro} className={styles.livro}/>Tutorial</button>
+            <button className={styles.tutorial}><Image src={livro} alt="Livro" className={styles.livro}/>Tutorial</button>
           </div>
-          {/* Mural de alertas */}
           <div className={styles.anuncio}>
             <div className={styles.quadro_alerta}>
               <div className={styles.tituloMural}>
-                <span><Image src={sino} className={styles.sino}/></span>
+                <span><Image src={sino} alt="Sino" className={styles.sino}/></span>
                 <h2>Mural de Alertas</h2>
               </div>
               <p>Aqui aparecerá as turmas que estão sem professores definidos.</p>
-
               <div className={styles.lista_alerta}>
-                <AlertItem />
-                <AlertItem />
-                <AlertItem />
-                <AlertItem />
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <AlertItem key={i} />
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         <div className={styles.container}>
-          {/* Filtros */}
           <div className={styles.filtros}>
             <select>
               <option>Curso</option>
@@ -66,19 +58,26 @@ export default function Home() {
               <option>Noturno</option>
             </select>
 
-            <input type="text" placeholder="Buscar" className={styles.buscar}/><Image src={lupa2} className={styles.lupa}/>
+            <input type="text" placeholder="Buscar" className={styles.buscar}/>
+            <Image src={lupa2} alt="Lupa" className={styles.lupa}/>
           </div>
 
-          {/* Grid de Cards */}
           <div className={styles.grade_cartoes}>
             {Array.from({ length: 12 }, (_, i) => (
               <Cartao key={i} />
             ))}
           </div>
 
-          {/* Paginação */}
           <div className={styles.paginacao}>
-            <span><img className={styles.esquerda} src="https://cdn-icons-png.flaticon.com/512/109/109617.png"></img>  Anterior</span>
+            <span>
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/109/109617.png"
+                alt="Seta Esquerda"
+                className={styles.esquerda}
+                width={20}
+                height={20}
+              /> Anterior
+            </span>
             <div className={styles.paginas}>
               <a href="#" className={styles.numero1}>1</a>
               <a href="#" className={styles.numero2}>2</a>
@@ -87,7 +86,15 @@ export default function Home() {
               <a href="#" className={styles.numero7}>7</a>
               <a href="#" className={styles.numero8}>8</a>
             </div>
-            <span>Próximo  <img className={styles.direita} src="https://cdn-icons-png.flaticon.com/512/109/109617.png"></img></span>
+            <span>Próximo
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/109/109617.png"
+                alt="Seta Direita"
+                className={styles.direita}
+                width={20}
+                height={20}
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -105,7 +112,9 @@ function AlertItem() {
           <div className={styles.icone_alerta}>!</div>
           <div className={styles.text_alerta}>Turma Resumida</div>
         </div>
-        <button className={styles.botao_professor}><Image src={friends} className={styles.friends}/> Professores</button>
+        <button className={styles.botao_professor}>
+          <Image src={friends} alt="Professores" className={styles.friends}/> Professores
+        </button>
       </div>
     </div>
   );
