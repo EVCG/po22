@@ -2,38 +2,16 @@ import styles from "../styles/page.module.css";
 import friends from "../img/friends.jpg";
 import livro from "../img/livro.jpg";
 import sino from "../img/sino.jpg";
-import lupa2 from "../img/lupa2.png"
+import lupa2 from "../img/lupa2.png";
 import Image from "next/image";
+import Header from "../components/header.js";
+import Footer from "../components/footer.js";
 
 export default function Home() {
   return (
     <div className={styles.body}>
       {/* Cabeçalho */}
-      <div className={styles.header}>
-        <div className={styles.logo_principal}>
-          <img
-            src="https://institucional.uniceub.br/hubfs/BrandCenter/img/logo-ceub-colorida-02.png"
-            className={styles.logo}
-          ></img>
-        </div>
-
-        {/* Navegação do site */}
-        <div className={styles.nav}>
-          <a href="#" className={styles.nav_painel}>Painel</a>
-          <a href="#" className={styles.nav_base_profesores}>Base Professores</a>
-          <a href="#" className={styles.nav_manual}>Manual</a>
-        </div>
-
-        {/* Usuario */}
-        <div className={styles.usuario}>
-          <h1>SEU NOME</h1>
-          <div className={styles.avatar}>
-            <div className={styles.cabeca}></div>
-            <div className={styles.corpo}></div>
-          </div>
-        </div>
-      </div>
-
+      <Header />
       {/* Conteudo Principal do site */}
       <div className={styles.main}>
         {/* Area de recepção e anuncios */}
@@ -114,8 +92,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Rodapé */}
-      <div className={styles.footer}></div>
+      <Footer />
     </div>
   );
 }

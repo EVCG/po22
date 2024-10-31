@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from '../styles/login.module.css'; 
+import styles from '../components/login.module.css'; 
 import logo from '../img/logo.png';
-import logo2 from '../img/logo2.png';
 import Image from "next/image";
 
 export default function Login() {

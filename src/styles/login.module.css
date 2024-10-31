@@ -22,6 +22,7 @@
   position: relative;
   left: -14vw;
   top: 5vw;
+  z-index: 6;
 }
 
 .logo_container2 {

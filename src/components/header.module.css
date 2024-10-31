@@ -1,0 +1,118 @@
+.header {
+    border-bottom: solid 1px grey;
+    padding-bottom: 1%;
+    height: 6vw;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top:-20px;
+    background-color: #f2f4f8;
+    padding: 15px;
+    padding-bottom: 20px;
+    z-index: 999;
+  }
+  
+  .main {
+    height: auto;
+    width: 100%;
+    margin-top: 5%;
+  }
+  
+  /* cabeçalho */
+  
+  .logo_principal {
+    width: 450px;
+    overflow: hidden;
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .logo {
+    width: 70%;
+    object-fit: cover;
+  }
+  
+  /* Navegação do site */
+  .nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    
+  }
+  
+  .nav a {
+    color: #43054e;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 38px;
+    width: auto;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .nav_painel {
+    color: #bd0084 !important;
+    border-bottom: #43054e solid 2px;
+  }
+  
+  .nav a:hover {
+    color: #bf0087;
+  
+  }
+  
+  .usuario {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 18%;
+    justify-content: space-between;
+    margin-right: 7%;
+  }
+  
+  .usuario h1 {
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .usuario img {
+    mix-blend-mode: multiply;
+  }
+  
+  .avatar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid #4B006E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+  }
+  
+  .cabeca {
+    width: 40%;
+    height: 40%;
+    background-color: #4B006E;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+  }
+  
+  .corpo {
+    width: 70%;
+    height: 30%;
+    background-color: #4B006E;
+    border-radius: 50% 50% 20% 20%;
+    position: absolute;
+    bottom: 0;
+  }
+  
